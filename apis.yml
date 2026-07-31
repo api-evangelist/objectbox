@@ -1,7 +1,28 @@
 aid: objectbox
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/objectbox.png
 name: ObjectBox
-description: ObjectBox is a company surfaced as a portfolio company of techstars and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  ObjectBox is a high-performance, low-footprint, offline-first on-device database
+  with built-in data synchronization and on-device vector search, designed for
+  mobile, IoT, embedded, and edge computing applications. It is delivered as native
+  language bindings (Java, Kotlin, C/C++, Go, Swift, Flutter/Dart, and Python)
+  rather than a hosted REST API, giving apps ACID-compliant local persistence that
+  works reliably offline and is described as up to 10x faster than SQLite. ObjectBox
+  was the first on-device vector database on the market, targeting Edge AI use cases
+  such as semantic search, recommendations, and retrieval-augmented generation, and
+  offers optional bi-directional Data Sync between devices and the cloud, including a
+  direct connector to MongoDB. Founded in Germany and backed by Techstars.
 url: https://raw.githubusercontent.com/api-evangelist/objectbox/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +32,19 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- Database
+- Embedded Database
+- Mobile Database
+- Edge Computing
+- Vector Database
+- Vector Search
+- Offline First
+- Data Sync
+- Edge AI
+- IoT
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +54,34 @@ maintainers:
 common:
 - type: Website
   url: https://objectbox.io/
+- type: Documentation
+  url: https://docs.objectbox.io/
+- type: APIReference
+  url: https://docs.objectbox.io/java-api-reference
+- type: GettingStarted
+  url: https://docs.objectbox.io/getting-started
+- type: Blog
+  url: https://objectbox.io/blog/
+- type: GitHubOrganization
+  url: https://github.com/objectbox
+- type: Support
+  url: https://objectbox.io/contact-us/
+- type: TermsOfService
+  url: https://objectbox.io/wordpress/wp-content/uploads/2024/10/ObjectBox-Terms-Of-UseAC2024.pdf
+- type: PrivacyPolicy
+  url: https://objectbox.io/privacy-policy/
+- type: Packages
+  url: packages/objectbox-packages.yml
+- type: SDKs
+  url: packages/objectbox-packages.yml
+- type: WellKnown
+  url: well-known/objectbox-well-known.yml
+- type: DomainSecurity
+  url: security/objectbox-domain-security.yml
+- type: LLMsTxt
+  url: llms/objectbox-llms.txt
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 4
+  pass: local-v1

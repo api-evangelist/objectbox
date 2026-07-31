@@ -1,0 +1,23 @@
+generated: '2026-07-20'
+method: probed
+source: live TLS/HTTP HEAD + dig against objectbox.io
+hosts:
+  - host: objectbox.io
+    https: true
+    server: Apache
+    hsts: false
+    hsts_max_age: null
+domains:
+  - domain: objectbox.io
+    dnssec: false
+    caa: []
+    spf: true
+    spf_record: 'v=spf1 include:_spf.google.com ~all'
+    dmarc: true
+    dmarc_policy: quarantine
+    dmarc_record: 'v=DMARC1; p=quarantine; pct=90; sp=none'
+notes: >-
+  HTTPS reachable (Apache origin); no HSTS response header observed. No DNSSEC (no
+  DS record) and no CAA records published. SPF and DMARC are configured (DMARC at
+  p=quarantine, pct=90, subdomain policy none). Absence of HSTS/DNSSEC/CAA is
+  recorded as valid probe data, not fabricated.

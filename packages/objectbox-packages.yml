@@ -1,0 +1,69 @@
+generated: '2026-07-20'
+method: searched
+source: https://objectbox.io/ , registry lookups (Maven Central, PyPI, pub.dev, pkg.go.dev), GitHub org github.com/objectbox
+notes: >-
+  ObjectBox ships as first-party on-device database bindings per language. The core
+  database engine and language bindings are Apache-2.0; the ObjectBox Sync client
+  binaries (io.objectbox:objectbox-sync-*) and the Sync Server are proprietary.
+packages:
+  - language: java
+    registry: maven
+    name: io.objectbox:objectbox-java
+    coordinates: io.objectbox:objectbox-java
+    version: 4.3.0
+    url: https://search.maven.org/artifact/io.objectbox/objectbox-java
+    install: 'implementation("io.objectbox:objectbox-java:4.3.0")'
+    official: true
+  - language: kotlin
+    registry: maven
+    name: io.objectbox:objectbox-kotlin
+    coordinates: io.objectbox:objectbox-kotlin
+    version: 4.3.0
+    url: https://search.maven.org/artifact/io.objectbox/objectbox-kotlin
+    install: 'implementation("io.objectbox:objectbox-kotlin:4.3.0")'
+    official: true
+  - language: android
+    registry: maven
+    name: io.objectbox:objectbox-android
+    coordinates: io.objectbox:objectbox-android
+    version: 4.3.0
+    url: https://search.maven.org/artifact/io.objectbox/objectbox-android
+    install: 'implementation("io.objectbox:objectbox-android:4.3.0")'
+    official: true
+  - language: dart
+    registry: pub.dev
+    name: objectbox
+    version: 5.3.2
+    url: https://pub.dev/packages/objectbox
+    install: dart pub add objectbox
+    repository: https://github.com/objectbox/objectbox-dart
+    official: true
+  - language: python
+    registry: pypi
+    name: objectbox
+    version: 4.0.0
+    url: https://pypi.org/project/objectbox/
+    install: pip install objectbox
+    repository: https://github.com/objectbox/objectbox-python
+    official: true
+  - language: go
+    registry: pkg.go.dev
+    name: github.com/objectbox/objectbox-go
+    url: https://pkg.go.dev/github.com/objectbox/objectbox-go
+    install: go get github.com/objectbox/objectbox-go
+    repository: https://github.com/objectbox/objectbox-go
+    official: true
+  - language: swift
+    registry: github
+    name: objectbox-swift
+    url: https://github.com/objectbox/objectbox-swift
+    install: 'SwiftPM: .package(url: "https://github.com/objectbox/objectbox-swift.git", ...)'
+    repository: https://github.com/objectbox/objectbox-swift
+    official: true
+  - language: c
+    registry: github
+    name: objectbox-c
+    url: https://github.com/objectbox/objectbox-c
+    install: 'download the C library from github.com/objectbox/objectbox-c releases'
+    repository: https://github.com/objectbox/objectbox-c
+    official: true

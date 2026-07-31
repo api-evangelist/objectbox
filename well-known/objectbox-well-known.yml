@@ -1,0 +1,28 @@
+generated: '2026-07-20'
+method: searched
+host: https://objectbox.io
+notes: >-
+  Probed the standard /.well-known/ discovery surface on objectbox.io and
+  docs.objectbox.io. ObjectBox is an on-device / embedded database delivered as
+  language bindings (no hosted REST API), so no OIDC/OAuth/api-catalog discovery
+  documents are published. An /llms.txt AI navigation guide IS published on both
+  hosts (captured verbatim at llms/objectbox-llms.txt).
+documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+other:
+  - path: /llms.txt
+    host: https://objectbox.io
+    status: 200
+    file: ../llms/objectbox-llms.txt
+  - path: /llms.txt
+    host: https://docs.objectbox.io
+    status: 200
