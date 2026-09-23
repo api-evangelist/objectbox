@@ -1,13 +1,21 @@
 generated: '2026-07-20'
 method: searched
 host: https://objectbox.io
-notes: >-
-  Probed the standard /.well-known/ discovery surface on objectbox.io and
-  docs.objectbox.io. ObjectBox is an on-device / embedded database delivered as
-  language bindings (no hosted REST API), so no OIDC/OAuth/api-catalog discovery
-  documents are published. An /llms.txt AI navigation guide IS published on both
-  hosts (captured verbatim at llms/objectbox-llms.txt).
-documents:
+notes: Probed the standard /.well-known/ discovery surface on objectbox.io and docs.objectbox.io. ObjectBox
+  is an on-device / embedded database delivered as language bindings (no hosted REST API), so no OIDC/OAuth/api-catalog
+  discovery documents are published. An /llms.txt AI navigation guide IS published on both hosts (captured
+  verbatim at llms/objectbox-llms.txt).
+other:
+- path: /llms.txt
+  host: https://objectbox.io
+  status: 200
+  file: ../llms/objectbox-llms.txt
+- path: /llms.txt
+  host: https://docs.objectbox.io
+  status: 200
+hosts:
+- host: https://objectbox.io
+  documents:
   - path: /.well-known/security.txt
     status: 404
   - path: /.well-known/openid-configuration
@@ -18,11 +26,8 @@ documents:
     status: 404
   - path: /.well-known/ai-plugin.json
     status: 404
-other:
-  - path: /llms.txt
-    host: https://objectbox.io
-    status: 200
-    file: ../llms/objectbox-llms.txt
-  - path: /llms.txt
-    host: https://docs.objectbox.io
-    status: 200
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
