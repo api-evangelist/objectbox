@@ -106,3 +106,61 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: objectbox-pub-dev
+  label: pub.dev
+  partner: pub-dev
+  partner_name: pub.dev
+  category: official SDK (Dart/Flutter)
+  type: register
+  channel: package-registry
+  evidence: https://pub.dev/packages/objectbox
+  source: edge
+  relationship: distribution-channel
+  contract_reference:
+    register: pub.dev (public registry JSON)
+    spec_file: null
+    language: Dart/Flutter
+    packages:
+    - name: objectbox
+      version: 5.3.2
+      released: '2026-05-20'
+      released_field: published
+      lapsed: false
+      page: https://pub.dev/packages/objectbox
+      repo_leg: not required (verified publisher)
+      publisher_leg: verified-publisher:objectbox.io
+      matched_by: domain
+    - name: objectbox_flutter_libs
+      version: 5.3.2
+      released: '2026-05-20'
+      released_field: published
+      lapsed: false
+      page: https://pub.dev/packages/objectbox_flutter_libs
+      repo_leg: not required (verified publisher)
+      publisher_leg: verified-publisher:objectbox.io
+      matched_by: domain
+    - name: objectbox_generator
+      version: 5.3.2
+      released: '2026-05-20'
+      released_field: published
+      lapsed: false
+      page: https://pub.dev/packages/objectbox_generator
+      repo_leg: not required (verified publisher)
+      publisher_leg: verified-publisher:objectbox.io
+      matched_by: domain
+    - name: objectbox_sync_flutter_libs
+      version: 5.3.2
+      released: '2026-05-20'
+      released_field: published
+      lapsed: false
+      page: https://pub.dev/packages/objectbox_sync_flutter_libs
+      repo_leg: not required (verified publisher)
+      publisher_leg: verified-publisher:objectbox.io
+      matched_by: domain
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-php-dart-elixir-package-registries.py
+    detected: '2026-10-22'
+  status: not-a-workflow
+  arazzo: null
